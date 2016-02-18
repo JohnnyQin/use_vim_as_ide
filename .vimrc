@@ -132,7 +132,13 @@ set hlsearch
 " 其他美化
 
 " 设置 gvim 显示字体
-set guifont=YaHei\ Consolas\ Hybrid\ 10.5
+if has("gui_gtk2")
+	set guifont=YaHei\ Consolas\ Hybrid\ 10.5
+elseif has("gui_macvim")
+	set guifont=YaHei\ Consolas\ Hybrid\ 10.5
+elseif has("gui_win32")
+	set guifont=YaHei\ Consolas\ Hybrid\ 10.5
+end
 
 " 禁止折行
 set nowrap
